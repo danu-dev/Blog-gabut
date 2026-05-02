@@ -140,7 +140,7 @@ export default function Navigation() {
             </div>
 
             <nav className="flex-1 flex flex-col justify-center px-10 gap-12">
-              {navItems.map((item, idx) => (
+              {navItems.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}

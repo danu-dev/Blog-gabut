@@ -1,8 +1,6 @@
-import { motion } from "framer-motion";
 import {
   CommandLineIcon,
   CpuChipIcon,
-  AcademicCapIcon,
   TrophyIcon,
   CircleStackIcon,
 } from "@heroicons/react/24/outline";

@@ -4,7 +4,6 @@ import {
   GlobeAltIcon,
   ArrowUpIcon,
 } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
