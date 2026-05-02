@@ -1,14 +1,14 @@
-import type { ReactNode } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
-import Footer from './components/Footer'
-import Navigation from './components/Navigation'
-import Archive from './pages/Archive'
-import Home from './pages/Home'
-import System from './pages/System'
+import type { ReactNode } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
+import Navigation from "./components/Navigation";
+import Archive from "./pages/Archive";
+import Home from "./pages/Home";
+import System from "./pages/System";
 
 const PageWrapper = ({ children }: { children: ReactNode }) => {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <motion.div
@@ -22,11 +22,11 @@ const PageWrapper = ({ children }: { children: ReactNode }) => {
       {children}
       <Footer />
     </motion.div>
-  )
-}
+  );
+};
 
 function AppRoutes() {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
@@ -57,16 +57,16 @@ function AppRoutes() {
         />
       </Routes>
     </AnimatePresence>
-  )
+  );
 }
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="flex min-h-screen bg-slate-50">
         <Navigation />
         <AppRoutes />
       </div>
-    </BrowserRouter>
-  )
+    </HashRouter>
+  );
 }
